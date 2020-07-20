@@ -11,16 +11,16 @@ def main():
         bsp = PiBSP()
         TX = TxAPI(bsp=bsp)
 
-	print 'Resetting all Rx devices, forgetting configuration and Shutting down network'
-	TX.reset(0xFF)	#0xFF = "reset all RX devices"
+        print 'Resetting all Rx devices, forgetting configuration and Shutting down network'
+        TX.reset(0xFF)  #0xFF = "reset all RX devices"
 
-	TX.save_configuration(1)
-	TX.shutdown()
+        TX.save_configuration(1)
+        TX.shutdown()
 
-	print 'Rebooting Tx module'
-	TX.reboot()
+        print 'Rebooting Tx module'
+        TX.reboot()
 
-	print 'Ready for next setup'
+        print 'Ready for next setup'
 
 if __name__ == '__main__':
         main()
