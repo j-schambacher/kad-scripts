@@ -40,7 +40,7 @@ def main():
         TX.start()
 
         print("push_map ....")
-        kad_push_map(TX, "room.cfg")
+        kad_push_map(TX, "/opt/kad/room.cfg")
 
         print("Set volume to max")
         TX.volume(0, 0xfffff)
